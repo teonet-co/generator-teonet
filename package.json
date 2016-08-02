@@ -1,0 +1,21 @@
+{
+  "name": "generator-teonet",
+  "version": "0.0.1",
+  "description": "Teonet server native C application generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.ksproject.org/teonet/generator-teonet.git"
+  },
+  "keywords": [
+    "network",
+    "teonet",
+    "yeoman-generator",
+    "C"
+  ],
+  "author": "Kirill Scherba <kirill@scherba.ru> (https://gitlab.ksproject.org)",
+  "license": "Apache-2.0"
+}
