@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT(teohws, 0.0.1, [kirill@scherba.ru])
-AC_DEFINE([PACKAGE_DESCRIPTION], ["Teonet HTTP Websocket Server application"], [Application description])
+AC_INIT(<%= name %>, <%= version %>, [<%= email %>])
+AC_DEFINE([PACKAGE_DESCRIPTION], ["<%= description %> application"], [Application description])
 AC_DEFINE([PACKAGE_DEPENDENCIES], ["libteonet-dev"], [Application dependencies])
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS([src/config.h])
@@ -38,7 +38,7 @@ AC_TYPE_SIZE_T
 # ***************************************************************************
 # Internatinalization
 # ***************************************************************************
-GETTEXT_PACKAGE=teoroom
+GETTEXT_PACKAGE=<%= name %>
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [GETTEXT package name])
 AM_GLIB_GNU_GETTEXT
@@ -58,12 +58,12 @@ else
 DX_HTML_FEATURE(ON)
 DX_CHM_FEATURE(OFF)
 DX_CHI_FEATURE(OFF)
-DX_MAN_FEATURE(ON)
+DX_MAN_FEATURE(OFF)
 DX_RTF_FEATURE(OFF)
 DX_XML_FEATURE(OFF)
 DX_PDF_FEATURE(OFF)
 DX_PS_FEATURE(OFF)
-DX_INIT_DOXYGEN(["Teonet HTTP Websocket Server"], Doxyfile, docs)
+DX_INIT_DOXYGEN([<%= name %>], Doxyfile, docs)
 
 fi
 
@@ -88,7 +88,7 @@ AM_CONDITIONAL(DEBUG, test x"$debug" = x"true")
 AM_PROG_LIBTOOL
 
 
-# PKG_CHECK_MODULES(TEOHWS, [glib-2.0 ])
+# PKG_CHECK_MODULES(<%= name_upper %>, [glib-2.0 ])
 
 AC_OUTPUT([
 Makefile

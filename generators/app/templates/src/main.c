@@ -1,16 +1,16 @@
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*- */
 /*
- * teohws application
+ * <%= name %> application
  *
  * main.cpp
  * Copyright (C) Kirill Scherba 2011-2014 <kirill@scherba.ru>
  *
- * teohws is free software: you can redistribute it and/or modify it
+ * <%= name %> is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
  * Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * teohws is distributed in the hope that it will be useful, but
+ * <%= name %> is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
@@ -36,7 +36,7 @@
 #undef PACKAGE_BUGREPORT
 #include "config.h"
 
-#define HWS_VERSION VERSION
+#define APP_VERSION "<%= version %>"
 
 #ifdef TEO_THREAD
 volatile int teonet_run = 1;
@@ -48,11 +48,11 @@ volatile int teonet_run = 1;
  * @param ke
  * @param event
  * @param data
- * @param data_len
+ * @param data_length
  * @param user_data
  */
 void event_cb(ksnetEvMgrClass *ke, ksnetEvMgrEvents event, void *data,
-              size_t data_len, void *user_data) {
+              size_t data_length, void *user_data) {
 
     switch(event) {
 
@@ -77,7 +77,7 @@ void event_cb(ksnetEvMgrClass *ke, ksnetEvMgrEvents event, void *data,
  */
 int main(int argc, char** argv) {
 
-    printf("Teonet room controller ver. " HWS_VERSION ", "
+    printf("<%= description %> application ver. " APP_VERSION ", "
            "based on teonet ver. %s\n",
            teoGetLibteonetVersion()
     );

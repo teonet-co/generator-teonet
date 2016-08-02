@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>teohws</name>
+            <name><%= name %></name>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions>h</header-extensions>
@@ -26,7 +26,7 @@
             <word>automake</word>
             <word>Kirill</word>
             <word>Scherba</word>
-            <word>teohws</word>
+            <word><%= name %></word>
             <word>teonet</word>
             <word>uninstall</word>
         </spellchecker-wordlist>

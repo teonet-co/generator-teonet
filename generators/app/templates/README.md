@@ -1,4 +1,4 @@
-# Teonet HTTP Websocket Server application
+# <%= description %> application
 
 ## 1. Description
 
@@ -8,8 +8,8 @@
 
 ### Install project with submodules
 
-    git clone git@gitlab.ksproject.org:teonet/teohws.git
-    cd teohws
+    git clone <%= repository %>
+    cd <%= name %>
     git submodule update --init
 
 ### Install Dependences
@@ -93,7 +93,7 @@ configure.ac
 
 ## 6. Run 
     
-    src/teohws teo-hws
+    src/<%= name %> <%= name %>
 
 ## 7. Teonet documentation
 

@@ -23,14 +23,14 @@ doxydoc_DATA = $(wildcard docs/html/*.*)
 doxydoc_searchdir = $(datarootdir)/doc/@PACKAGE@/html/search
 doxydoc_search_DATA = $(wildcard docs/html/search/*.*)
 
-DX_CLEANFILES = -rf @DX_DOCDIR@
+DX_CLEANFILES = -rf @DX_DOCDIR@/*
 
 endif
 
 SUBDIRS = src po
 
-teohwsdocdir = ${prefix}/doc/@PACKAGE@
-teohwsdoc_DATA = \
+<%= name %>docdir = ${prefix}/doc/@PACKAGE@
+<%= name %>doc_DATA = \
 	README\
 	COPYING\
 	AUTHORS\
@@ -42,7 +42,7 @@ INTLTOOL_FILES = intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
 
-EXTRA_DIST = $(teohwsdoc_DATA) \
+EXTRA_DIST = $(<%= name %>doc_DATA) \
 	$(INTLTOOL_FILES)
 
 DISTCLEANFILES = intltool-extract \
@@ -52,4 +52,4 @@ DISTCLEANFILES = intltool-extract \
 
 # Remove doc directory on uninstall
 uninstall-local:
-	-rm -r $(teohwsdocdir)
+	-rm -r $(<%= name %>docdir)

@@ -1,0 +1,8 @@
+Kirill Scherba <kirill@scherba.ru> 
+    
+    2016: libteonet-dev, teonet_templ, generator-teonet
+
+<%= author %> <<%= email %>>
+
+    <%= name_capitalize %> application 
+    <%= description %> application 

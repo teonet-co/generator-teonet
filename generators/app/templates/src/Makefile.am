@@ -4,7 +4,7 @@
 AM_CPPFLAGS = \
 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
 	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
-	-DPACKAGE_DATA_DIR=\""$(datadir)"\" $(TEOHWS_CFLAGS)
+	-DPACKAGE_DATA_DIR=\""$(datadir)"\" $(<%= name_upper %>_CFLAGS)
 
 AM_CFLAGS = \
 	 -Wall \
@@ -13,6 +13,8 @@ AM_CFLAGS = \
 	 -I$(HOME)/Projects/teonet/src/ \
 	 -I$(HOME)/Projects/teonet/embedded/libpbl/src \
 	 -I$(HOME)/Projects/teonet/embedded/teocli/libteol0 \
+	 -I$(HOME)/Projects/teonet/embedded/libtrudp/src \
+	 -I/usr/include/libtrudp \
 	 -I/usr/include/teonet
 
 AM_LDFLAGS = \
@@ -23,7 +25,10 @@ AM_CXXFLAGS = \
          -g -Wall \
 	 -std=c++11 \
 	 -I/opt/localionclude \
-	 -I$(HOME)/Projects/teonet/src/
+	 -I$(HOME)/Projects/teonet/src/ \
+	 -I$(HOME)/Projects/teonet/embedded/libtrudp/src \
+	 -I/usr/include/libtrudp \
+	 -I/usr/include/teonet
 
 ## Debug info
 if DEBUG
@@ -36,11 +41,11 @@ endif
 
 LIBS =-lteonet -lcrypto
 
-bin_PROGRAMS = teohws
+bin_PROGRAMS = <%= name %>
 
-teohws_SOURCES = \
+<%= name %>_SOURCES = \
 	main.c
 
-#teohws_LDFLAGS =
+#<%= name %>_LDFLAGS =
 
-teohws_LDADD = $(TEOHWS_LIBS)
+<%= name %>_LDADD = $(<%= name %>_LIBS)
