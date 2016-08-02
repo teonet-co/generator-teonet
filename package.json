@@ -1,6 +1,6 @@
 {
   "name": "generator-teonet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Teonet server native C application generator",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,20 @@
     "yeoman-generator",
     "C"
   ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators/app"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^1.2.0",
+    "chalk": "^1.1.3",
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
   "author": "Kirill Scherba <kirill@scherba.ru> (https://gitlab.ksproject.org)",
   "license": "Apache-2.0"
 }
