@@ -1,4 +1,4 @@
-# Teonet server native C application generator
+# Teonet server native C application generator [![NPM version][npm-image]][npm-url]
 
 Yeoman generator to create new Teonet server native C application. The Teonet 
 Server application can execute under Linux or Mac OS only. This readme file 
