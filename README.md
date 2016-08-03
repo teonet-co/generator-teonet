@@ -71,7 +71,7 @@ Update repositories database:
 Apache-2.0 © [Kirill Scherba](https://gitlab.ksproject.org)
 
 
-[npm-image]: https://badge.fury.io/js/generator-teonet
+[npm-image]: https://badge.fury.io/js/generator-teonet.svg
 [npm-url]: https://npmjs.org/package/generator-teonet
 [travis-image]: https://travis-ci.org//generator-teonet.svg?branch=master
 [travis-url]: https://travis-ci.org//generator-teonet
