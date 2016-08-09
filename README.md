@@ -11,7 +11,7 @@ shows terminal commands for Debian, Ubuntu or Linux Mint.
 
     sudo chown -R $USER /usr/local/lib/node_modules
 
-Install the Yeoman:
+### Install the Yeoman:
 
     npm install -g yo
 
