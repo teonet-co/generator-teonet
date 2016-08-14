@@ -84,6 +84,15 @@ int main(int argc, char** argv) {
 
     // Initialize teonet event manager and Read configuration
     ksnetEvMgrClass *ke = ksnetEvMgrInit(argc, argv, event_cb /*NULL*/, READ_ALL);
+    
+    // Set application type
+    //teoSetAppType(ke, "<%= name %>");
+    
+    // Set application version
+    teoSetAppVersion(ke, APP_VERSION);
+    
+    // Start Timer event 
+    //teonet.setCustomTimer(ke, 5.000);
 
     // Start teonet
     ksnetEvMgrRun(ke);
