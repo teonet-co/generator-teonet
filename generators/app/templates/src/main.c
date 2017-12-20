@@ -3,7 +3,7 @@
  * <%= name %> application
  *
  * main.cpp
- * Copyright (C) Kirill Scherba 2011-2014 <kirill@scherba.ru>
+ * Copyright (C) <%= author %> 2011-2017 <<%= email %>>
  *
  * <%= name %> is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the

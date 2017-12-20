@@ -26,6 +26,8 @@ AM_CXXFLAGS = \
 	 -std=c++11 \
 	 -I/opt/localionclude \
 	 -I$(HOME)/Projects/teonet/src/ \
+	 -I$(HOME)/Projects/teonet/embedded/libpbl/src \
+	 -I$(HOME)/Projects/teonet/embedded/teocli/libteol0 \
 	 -I$(HOME)/Projects/teonet/embedded/libtrudp/src \
 	 -I/usr/include/libtrudp \
 	 -I/usr/include/teonet
