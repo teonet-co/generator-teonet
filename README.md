@@ -1,6 +1,6 @@
-# Teonet server native C application generator [![NPM version][npm-image]][npm-url]
+# Teonet server native C/C++ application generator [![NPM version][npm-image]][npm-url]
 
-Yeoman generator to create new Teonet server native C application. The Teonet 
+Yeoman generator to create new Teonet server native C/C++ application. The Teonet 
 Server application can execute under Linux or Mac OS only. This readme file 
 shows terminal commands for Debian, Ubuntu or Linux Mint.
 

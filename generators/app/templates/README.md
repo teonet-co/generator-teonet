@@ -6,32 +6,20 @@
 
 ## 2. Installation
 
-### Install project with submodules
+### 2.1 Install project with submodules
 
     git clone <%= repository %>
     cd <%= name %>
     git submodule update --init
 
-### Install Dependences
+### 2.2 Install Dependences
 
 
-#### Libteonet:
-
-    See [4. Install Teonet library from repositories](#4-install-teonet-library-from-repositories)
-
-#### OpenSSL
-
-    \todo Add description
-
-## 3. Generate your application sources (first time when got sources from repository)
-
-    ./autogen.sh
-
-## 4. Install Teonet library from repositories
+### 2.2.1 Libteonet
 
 DEB / RPM repository: http://repo.ksproject.org
 
-### UBUNTU
+#### 2.2.1.1 UBUNTU
 
 http://repo.ksproject.org/ubuntu/
 
@@ -47,7 +35,7 @@ http://repo.ksproject.org/ubuntu/
     sudo apt-get install -y libteonet-dev
 
 
-### CENTOS / RHEL / FEDORA
+#### 2.2.1.2 CENTOS / RHEL / FEDORA
 
 http://repo.ksproject.org/rhel/x86_64/
 
@@ -70,7 +58,7 @@ http://repo.ksproject.org/rhel/x86_64/
     yum install libteonet
     ldconfig 
 
-### SUSE
+#### 2.2.1.3 SUSE
 
 #### Add repository
 
@@ -81,20 +69,28 @@ http://repo.ksproject.org/rhel/x86_64/
     zypper in -y libteonet
     ldconfig
 
+### 2.2.2 OpenSSL
 
-## 5. Make your application 
+    \todo Add description
+
+## 3. Generate your application sources (first time when got sources from repository)
+
+    ./autogen.sh
+
+
+## 4. Make your application 
 
     make
 
-## 5.1 Using autoscan to Create configure.ac
+## 4.1 Using autoscan to Create configure.ac
 
 After make some global changes in sources code use ```autoscan``` to update projects 
 configure.ac
 
-## 6. Run 
+## 5. Run 
     
     src/<%= name %> <%= name %>
 
-## 7. Teonet documentation
+## 6. Teonet documentation
 
 See teonet documentation at: http://repo.ksproject.org/docs/teonet/

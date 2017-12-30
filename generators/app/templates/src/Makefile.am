@@ -46,7 +46,7 @@ LIBS =-lteonet -lcrypto
 bin_PROGRAMS = <%= name %>
 
 <%= name %>_SOURCES = \
-	main.c
+	main.<%= mainext %>
 
 #<%= name %>_LDFLAGS =
 

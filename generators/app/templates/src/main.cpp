@@ -3,7 +3,7 @@
  * <%= name %> application
  *
  * main.cpp
- * Copyright (C) <%= author %> 2011-2017 <<%= email %>>
+ * Copyright (C) <%= author %> 2017 <<%= email %>>
  *
  * <%= name %> is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,6 +27,7 @@
  * 
  * Application API:
  * 
+ *  \TODO Describe server API here
  *  CMD_USER: ...
  *      @input ...
  *      @output ...
@@ -148,7 +149,7 @@ public:
 };
 
 /**
- * Main teochat application function
+ * Main <%= name %> application function
  *
  * @param argc Number of parameters
  * @param argv Parameters array
@@ -157,7 +158,7 @@ public:
  */
 int main(int argc, char** argv) {
 
-  std::cout << "<%= description %> c++  application ver " APP_VERSION ", based on teonet ver "
+  std::cout << "<%= description %> C++ application ver " APP_VERSION ", based on teonet ver "
     << teoGetLibteonetVersion() << "\n";
 
   // Initialize teonet event manager and Read configuration

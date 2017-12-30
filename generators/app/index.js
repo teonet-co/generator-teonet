@@ -51,7 +51,16 @@ module.exports = generators.Base.extend({
         type: 'input',
         name: 'description',
         message: 'Please describe the project',
-        default: "Teonet server native C"
+        default: "Teonet server native C/C++"
+    },
+    {
+        type: 'list',
+        name: 'mainext',
+        message: 'What is extension of your main project file?',
+            choices: [
+                'c',
+                'cpp'
+            ]
     },
     {
         type: 'input',
