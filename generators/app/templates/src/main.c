@@ -77,7 +77,7 @@ void event_cb(ksnetEvMgrClass *ke, ksnetEvMgrEvents event, void *data,
  */
 int main(int argc, char** argv) {
 
-    printf("<%= description %> application ver. " APP_VERSION ", "
+    printf("<%= description %> C PP_VERSION ", "
            "based on teonet ver. %s\n",
            teoGetLibteonetVersion()
     );

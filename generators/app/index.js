@@ -38,7 +38,7 @@ module.exports = generators.Base.extend({
         type: 'input',
         name: 'name',
         message: 'What would you love to name this project (lowercase name of application executable file)?',
-        default: 'teoapp' //this.appname
+        default: 'teoapp' 
     },
     {
         type: 'input',
@@ -51,15 +51,15 @@ module.exports = generators.Base.extend({
         type: 'input',
         name: 'description',
         message: 'Please describe the project',
-        default: "Teonet server native C/C++"
+        default: "Teonet server native"
     },
     {
         type: 'list',
         name: 'mainext',
         message: 'What is extension of your main project file?',
             choices: [
-                'c',
-                'cpp'
+                'cpp',
+                'c'
             ]
     },
     {
@@ -123,6 +123,7 @@ module.exports = generators.Base.extend({
             name_upper: this.props.name_upper,
             name_capitalize: this.props.name_capitalize,
             description: this.props.description,
+            mainext: this.props.mainext,
             version: this.props.version,
             repository: this.props.repository,
             author: this.props.author,
@@ -130,6 +131,10 @@ module.exports = generators.Base.extend({
             license: this.props.license
           }
       );
+      this.fs.copy(
+          this.destinationPath('./gitignore'),
+          this.destinationPath('./.gitignore'));
+      this.fs.delete(this.destinationPath('./gitignore'));
     }
   },
 
@@ -138,7 +143,7 @@ module.exports = generators.Base.extend({
       
     console.log(
         "\n\nThe new teonet Application was created. Add this project to" +
-        " your git repository.\n" +
+        " your git repository: " + chalk.yellow("git init && git add .") + "\n" +
         "Then run " + chalk.yellow("./autogen.sh") + " to prepare configure, " +
         "then execute " + chalk.yellow("make") + " files,\n" + 
         "and execute your application with " + chalk.yellow("src/" + this.props.name + " teo-app") + " command\n" + 
