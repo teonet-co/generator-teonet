@@ -108,7 +108,7 @@ Publish project to NPM:
 
 ## License
 
-Apache-2.0 © [Kirill Scherba](https://gitlab.ksproject.org)
+Apache-2.0 © [Kirill Scherba](https://github.com/kirill-scherba)
 
 
 [npm-image]: https://badge.fury.io/js/generator-teonet.svg

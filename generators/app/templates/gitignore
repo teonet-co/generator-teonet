@@ -1,3 +1,6 @@
+.deps
+.libs
+*.o
 Makefile
 Makefile.in
 aclocal.m4
@@ -18,9 +21,6 @@ config.guess
 /install-sh
 /configure.scan
 /autoscan.log
-.deps
-.libs
-*.o
 /nbproject/private
 /po/Makefile.in.in
 /po/stamp-it

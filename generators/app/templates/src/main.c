@@ -3,7 +3,7 @@
  * <%= name %> application
  *
  * main.c
- * Copyright (C) <%= author %> 2017 <<%= email %>>
+ * Copyright (C) <%= author %> 2018 <<%= email %>>
  *
  * <%= name %> is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -70,28 +70,28 @@ void event_cb(ksnetEvMgrClass *ke, ksnetEvMgrEvents event, void *data,
 
 /**
  * Main application function
- * 
+ *
  * @param argc
  * @param argv
- * @return 
+ * @return
  */
 int main(int argc, char** argv) {
 
-    printf("<%= description %> C PP_VERSION ", "
+    printf("<%= description %> C application ver " APP_VERSION ", "
            "based on teonet ver. %s\n",
            teoGetLibteonetVersion()
     );
 
     // Initialize teonet event manager and Read configuration
     ksnetEvMgrClass *ke = ksnetEvMgrInit(argc, argv, event_cb /*NULL*/, READ_ALL);
-    
+
     // Set application type
     //teoSetAppType(ke, "<%= name %>");
-    
+
     // Set application version
     teoSetAppVersion(ke, APP_VERSION);
-    
-    // Start Timer event 
+
+    // Start Timer event
     //teonet.setCustomTimer(ke, 5.000);
 
     // Start teonet
