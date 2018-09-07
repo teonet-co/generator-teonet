@@ -35,9 +35,20 @@
  * Created on December 20, 2017, 9:52 AM
  */
 
-#include "teonet"
+#include <teonet.hpp>
 
-#define APP_VERSION "<%= version %>"
+// Add configuration header
+#undef PACKAGE
+#undef VERSION
+#undef GETTEXT_PACKAGE
+#undef PACKAGE_VERSION
+#undef PACKAGE_TARNAME
+#undef PACKAGE_STRING
+#undef PACKAGE_NAME
+#undef PACKAGE_BUGREPORT
+#include "config.h"
+
+#define APP_VERSION VERSION
 
 class MyTeonet : public teo::Teonet {
 

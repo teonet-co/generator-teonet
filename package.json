@@ -1,6 +1,6 @@
 {
   "name": "generator-teonet",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "Teonet server native C/C++ application generator",
   "main": "index.js",
   "scripts": {
